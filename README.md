@@ -146,16 +146,4 @@ Lógica de negócios aplicada ao carrinho de compras
 Guilherme Varjão Santos
 Desenvolvedor em formação
 
-🔥 Se quiser deixar mais profissional ainda
 
-Posso montar:
-
-README com badges
-
-README com GIF demonstrando o sistema
-
-README estilo projeto enterprise
-
-Versão com arquitetura MVC explicada
-
-README focado em portfólio para recrutadores
