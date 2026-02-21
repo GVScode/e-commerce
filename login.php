@@ -1,25 +1,34 @@
 <?php
+
 include 'config.php';
 
 $error = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
     $email = $_POST['email'];
     $password = md5($_POST['password']);
 
-    $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
-    $result = $conn->query($sql);
+    // Usando Prepared Statement (mais seguro)
+    $stmt = $conn->prepare("SELECT id, email FROM users WHERE email = ? AND password = ?");
+    $stmt->bind_param("ss", $email, $password);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        $_SESSION['user'] = $email;
+        $user = $result->fetch_assoc();
+        $_SESSION['user'] = $user['email'];
+        $_SESSION['user_id'] = $user['id'];
+
         header("Location: index.php");
         exit();
     } else {
         $error = "Email ou senha inválidos!";
     }
+
+    $stmt->close();
 }
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,17 +38,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
 
-<div class="login-wrapper">
-    <div class="login-card">
+<div class="auth-wrapper">
+    <div class="auth-card">
 
-        <h2 class="login-title">Bem-vindo 👋</h2>
-        <p class="login-subtitle">Faça login para continuar</p>
+        <h2 class="auth-title">Bem-vindo 👋</h2>
+        <p class="auth-subtitle">Faça login para continuar</p>
 
         <?php if ($error): ?>
-            <div class="login-error"><?= $error ?></div>
+            <div class="auth-error"><?= $error ?></div>
         <?php endif; ?>
 
-        <form method="POST" class="login-form">
+        <form method="POST" class="auth-form">
+            
             <div class="input-group">
                 <input type="email" name="email" required>
                 <label>Email</label>
@@ -50,8 +60,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label>Senha</label>
             </div>
 
-            <button type="submit" class="login-btn">Entrar</button>
+            <button type="submit" class="auth-btn">Entrar</button>
+
         </form>
+
+        <div class="auth-footer">
+            Ainda não tem conta?
+            <a href="register.php">Criar conta</a>
+        </div>
 
     </div>
 </div>
