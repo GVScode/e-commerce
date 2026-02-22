@@ -73,10 +73,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     </div>
 </div>
-<div class="auth-wrapper">
-    <div class="auth-card">
-        ...
-    </div>
-</div>
 </body>
 </html>

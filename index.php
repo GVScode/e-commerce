@@ -35,6 +35,41 @@ $result = $conn->query("SELECT * FROM products");
     </div>
 </section>
 
+<!-- CARROSSEL MODERNO -->
+<section class="carousel-section">
+    <div class="carousel-container">
+        
+        <div class="carousel-slide active">
+            <img src="assets/images/Bannerroxo.png" alt="Promoção 1">
+            <div class="carousel-caption">
+                <h2>🔥 Ofertas Imperdíveis</h2>
+                <p>Descontos exclusivos por tempo limitado</p>
+            </div>
+        </div>
+
+        <div class="carousel-slide">
+            <img src="assets/images/Banner_smartwatch.png" alt="Promoção 2">
+            <div class="carousel-caption">
+                <h2>🚀 Novidades da Semana</h2>
+                <p>Confira os lançamentos mais desejados</p>
+            </div>
+        </div>
+
+        <div class="carousel-slide">
+            <img src="assets/images/bannerBlack.png" alt="Promoção 3">
+            <div class="carousel-caption">
+                <h2>💎 Produtos Premium</h2>
+                <p>Qualidade e tecnologia para você</p>
+            </div>
+        </div>
+
+        <!-- Botões -->
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+
+    </div>
+</section>
+
 <!-- PRODUTOS -->
 <section class="products-section">
     <h2 class="section-title">Nossos Produtos</h2>
@@ -61,7 +96,34 @@ $result = $conn->query("SELECT * FROM products");
         <?php } ?>
     </div>
 </section>
+<script>
+    const slides = document.querySelectorAll(".carousel-slide");
+    const nextBtn = document.querySelector(".next");
+    const prevBtn = document.querySelector(".prev");
 
+    let index = 0;
+
+    function showSlide(i) {
+        slides.forEach(slide => slide.classList.remove("active"));
+        slides[i].classList.add("active");
+    }
+
+    function nextSlide() {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+    }
+
+    function prevSlide() {
+        index = (index - 1 + slides.length) % slides.length;
+        showSlide(index);
+    }
+
+    nextBtn.addEventListener("click", nextSlide);
+    prevBtn.addEventListener("click", prevSlide);
+
+    // Auto play
+    setInterval(nextSlide, 5000);
+</script>
 </body>
 <!-- FOOTER -->
 <footer class="main-footer">

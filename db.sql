@@ -18,8 +18,3 @@ CREATE TABLE products (
 INSERT INTO users (email, password)
 VALUES ('admin@email.com', MD5('123456'));
 
-INSERT INTO products (name, description, price, image) VALUES
-('Notebook', 'Notebook potente', 3500.00, 'https://via.placeholder.com/300'),
-('Mouse Gamer', 'Mouse RGB', 150.00, 'https://via.placeholder.com/300'),
-('Teclado Mecânico', 'Teclado Switch Blue', 450.00, 'https://via.placeholder.com/300'),
-('Monitor 24"', 'Full HD', 900.00, 'https://via.placeholder.com/300');
