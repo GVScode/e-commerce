@@ -146,6 +146,4 @@ Lógica de negócios aplicada ao carrinho de compras
 Guilherme Varjão Santos
 Desenvolvedor em formação
 
-http://localhost/e-commerce/login.php
-http://localhost/phpmyadmin/index.php
 
