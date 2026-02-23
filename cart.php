@@ -3,7 +3,7 @@ include 'config.php';
 
 $total = 0;
 ?>
-<link rel="stylesheet" href="/e-commerce/assets/style.css">
+<link rel="stylesheet" href="/ecommerce/assets/style.css">
 <div class="cart-wrapper">
     <h2 class="cart-title">🛒 Seu Carrinho</h2>
     <a href="index.php">← Continuar comprando</a>

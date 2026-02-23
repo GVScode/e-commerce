@@ -8,7 +8,7 @@ session_destroy();
 <head>
     <meta charset="UTF-8">
     <title>Logout</title>
-    <link rel="stylesheet" href="/e-commerce/assets/style.css">
+    <link rel="stylesheet" href="/ecommerce/assets/style.css">
 </head>
 <body>
 

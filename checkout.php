@@ -9,7 +9,7 @@ $total = 0;
 <head>
     <meta charset="UTF-8">
     <title>Checkout</title>
-    <link rel="stylesheet" href="/e-commerce/assets/style.css">
+    <link rel="stylesheet" href="/ecommerce/assets/style.css">
 </head>
 
 <body>
