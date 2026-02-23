@@ -4,7 +4,7 @@ session_start();
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db   = "e-commerce";
+$db   = "ecommerce";
 
 $conn = new mysqli($host, $user, $pass, $db);
 
