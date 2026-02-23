@@ -27,7 +27,7 @@ VALUES
 ('Fire tv stick hd','Fire TV stick hd','299.99','assets/images/firestick.webp'),
 ('Fone Bluetooth','Fone Bluetooth','399.00','assets/images/fone_bluetooth.jpg'),
 ('Headset','Headset gamer','299.99','assets/images/headset.jpg'),
-('Iphone 17 PRO MAX','Iphone 17 PRO MAX','14.000','assets/images/iphone.jpeg'),
+('Iphone 17 PRO MAX','Iphone 17 PRO MAX','14000','assets/images/iphone.jpeg'),
 ('Nitendo Switch','Nitendo Switch','2400.00','assets/images/nitendo-switch.jpg'),
 ('Microfone','Microfone Gamer','600.00','assets/images/Microfone.jpg'),
 ('Monitor','Monitor Gamer','899.90','assets/images/monitor.jpeg'),
