@@ -28,5 +28,5 @@ VALUES
 ('Fone Bluetooth','Fone Bluetooth','399.00','assets/images/fone_bluetooth.jpg'),
 ('Headset','Headset gamer','299.99','assets/images/headset.jpg'),
 ('Iphone 17 PRO MAX','Iphone 17 PRO MAX','14.000','assets/images/iphone.jpeg'),
-('Nitendo Switch','Nitendo Switch','2400.00','assets/images/nitendo-switch.jpg'))
+('Nitendo Switch','Nitendo Switch','2400.00','assets/images/nitendo-switch.jpg')
 
